@@ -19,8 +19,19 @@
       <stop offset="70%" stop-color="#0284c7" stop-opacity="0.03"/>
       <stop offset="100%" stop-color="#0b1120" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="scanGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="82%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#7dd3fc" stop-opacity="0.55"/>
+    </linearGradient>
     <clipPath id="windowClip">
       <rect x="1" y="1" width="898" height="443" rx="12"/>
+    </clipPath>
+    <clipPath id="portraitClip">
+      <rect x="17" y="68" width="332" height="322" rx="4"/>
+    </clipPath>
+    <clipPath id="scopeClip">
+      <rect x="742" y="55" width="122" height="18" rx="3"/>
     </clipPath>
     <style>
       .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
@@ -36,8 +47,43 @@
       .val-accent { font-size: 11.5px; fill: #7dd3fc; font-weight: 500; }
       .val-ok { font-size: 11.5px; fill: #34d399; font-weight: 500; }
       .status-txt { font-size: 10px; fill: #64748b; letter-spacing: 0.6px; }
-      @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
-      .cursor { animation: blink 1.1s step-end infinite; }
+
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      @keyframes scanSweep {
+        0% { transform: translateY(36px); opacity: 0; }
+        8% { opacity: 1; }
+        72% { transform: translateY(392px); opacity: 0.9; }
+        80% { transform: translateY(398px); opacity: 0; }
+        100% { transform: translateY(398px); opacity: 0; }
+      }
+      @keyframes ledPulse {
+        0%, 100% { opacity: 0.35; }
+        50% { opacity: 1; }
+      }
+      @keyframes glowBreathe {
+        0%, 100% { opacity: 0.72; }
+        50% { opacity: 1; }
+      }
+      @keyframes bootIn {
+        0% { opacity: 0; transform: translateY(4px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes scopeScroll {
+        0% { transform: translateX(0px); }
+        100% { transform: translateX(-64px); }
+      }
+
+      .cursor { animation: blink 1.05s step-end infinite; }
+      .scan-beam { animation: scanSweep 5.6s ease-in-out infinite; }
+      .led-pulse { animation: ledPulse 2.4s ease-in-out infinite; }
+      .glow-breathe { animation: glowBreathe 5.6s ease-in-out infinite; }
+      .scope-wave { animation: scopeScroll 2.4s linear infinite; }
+      .boot-1 { opacity: 0; animation: bootIn 0.45s ease-out 0.15s forwards; }
+      .boot-2 { opacity: 0; animation: bootIn 0.45s ease-out 0.45s forwards; }
+      .boot-3 { opacity: 0; animation: bootIn 0.45s ease-out 0.75s forwards; }
     </style>
   </defs>
 
@@ -66,9 +112,9 @@
 
     <!-- Left Pane: Portrait Box -->
     <rect x="16" y="48" width="334" height="358" rx="8" fill="#070b14" stroke="#1e293b" stroke-width="1"/>
-    <ellipse cx="183" cy="220" rx="145" ry="155" fill="url(#portraitGlow)"/>
+    <ellipse cx="183" cy="220" rx="145" ry="155" fill="url(#portraitGlow)" class="glow-breathe"/>
     <text x="28" y="64" class="mono tag">VISUAL.IMG // PORTRAIT_ASCII</text>
-    <circle cx="336" cy="60" r="3" fill="#38bdf8" opacity="0.8"/>
+    <circle cx="336" cy="60" r="3" fill="#38bdf8" class="led-pulse"/>
 
     <!-- ASCII Portrait -->
     <g class="ascii">
@@ -114,10 +160,18 @@
     <text x="28" y="379.3" xml:space="preserve"><tspan fill="none">    </tspan><tspan fill="#172554">..</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0369a1">+;</tspan><tspan fill="#172554">............</tspan><tspan fill="#1e3a8a">,,,,</tspan><tspan fill="#172554">..</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0369a1">;;</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#1d4ed8">:;;;:</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">:::</tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">...,</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#1d4ed8">::</tspan><tspan fill="#1e3a8a">:,</tspan></text>
     </g>
 
+    <!-- Biometric Scanline Sweep -->
+    <g clip-path="url(#portraitClip)">
+      <g class="scan-beam">
+        <rect x="17" y="0" width="332" height="32" fill="url(#scanGrad)"/>
+        <line x1="17" y1="32" x2="349" y2="32" stroke="#7dd3fc" stroke-width="1" opacity="0.85"/>
+      </g>
+    </g>
+
     <!-- Portrait Footer Meta -->
     <line x1="28" y1="391" x2="338" y2="391" stroke="#1e293b" stroke-width="0.8"/>
     <text x="28" y="401" class="mono status-txt">RES: 62x43 MONO</text>
-    <text x="338" y="401" text-anchor="end" class="mono status-txt">RENDER: OK</text>
+    <text x="338" y="401" text-anchor="end" class="mono status-txt">SCAN: ACTIVE</text>
 
     <!-- Right Pane: Neofetch Telemetry -->
     <rect x="364" y="48" width="520" height="358" rx="8" fill="#090f1d" stroke="#1e293b" stroke-width="1"/>
@@ -125,45 +179,65 @@
     <!-- Terminal Command Header -->
     <text x="382" y="70" class="mono prompt">buildwithmajid@github<tspan fill="#64748b">:~$</tspan> <tspan fill="#e2e8f0">neofetch --spec</tspan></text>
     <rect x="680" y="59" width="7" height="13" fill="#38bdf8" class="cursor"/>
+
+    <!-- Mini Oscilloscope (Hardware/IoT Signal) -->
+    <rect x="741" y="54" width="124" height="20" rx="4" fill="#060a13" stroke="#1e293b" stroke-width="0.9"/>
+    <line x1="742" y1="64" x2="864" y2="64" stroke="#1e293b" stroke-width="0.6" stroke-dasharray="2 2"/>
+    <g clip-path="url(#scopeClip)">
+      <path class="scope-wave"
+            d="M 740 64 L 750 64 L 754 58 L 758 70 L 762 60 L 766 64 L 776 64 L 778 58 L 786 58 L 788 64 L 796 64 L 800 69 L 804 64 L 814 64 L 818 58 L 822 70 L 826 60 L 830 64 L 840 64 L 842 58 L 850 58 L 852 64 L 860 64 L 864 69 L 868 64 L 878 64 L 882 58 L 886 70 L 890 60 L 894 64 L 904 64 L 906 58 L 914 58 L 916 64 L 924 64 L 928 69 L 932 64"
+            stroke="#38bdf8" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+
     <rect x="382" y="79" width="484" height="1.2" fill="url(#accentLine)"/>
 
     <!-- SECTION: IDENTITY -->
-    <text x="382" y="102" class="mono sec">IDENTITY</text>
-    <text x="382" y="121" class="mono key">Subject</text>
-    <text x="462" y="121" class="mono val-hi">Muhammad Abdul Majid</text>
-    <text x="382" y="138" class="mono key">Role</text>
-    <text x="462" y="138" class="mono val">Computer Engineering • Backend &amp; IoT</text>
-    <text x="382" y="155" class="mono key">Campus</text>
-    <text x="462" y="155" class="mono val">Universitas Diponegoro (UNDIP)</text>
-    <text x="382" y="172" class="mono key">Location</text>
-    <text x="462" y="172" class="mono val-dim">Semarang, Indonesia (UTC+7)</text>
-    <text x="382" y="189" class="mono key">Status</text>
-    <circle cx="466" cy="185" r="3.5" fill="#34d399"/>
-    <text x="476" y="189" class="mono val-ok">Building • Open to Internships &amp; Collab</text>
+    <g class="boot-1">
+      <text x="382" y="102" class="mono sec">IDENTITY</text>
+      <text x="382" y="121" class="mono key">Subject</text>
+      <text x="462" y="121" class="mono val-hi">Muhammad Abdul Majid</text>
+      <text x="382" y="138" class="mono key">Role</text>
+      <text x="462" y="138" class="mono val">Computer Engineering • Backend &amp; IoT</text>
+      <text x="382" y="155" class="mono key">Campus</text>
+      <text x="462" y="155" class="mono val">Universitas Diponegoro (UNDIP)</text>
+      <text x="382" y="172" class="mono key">Location</text>
+      <text x="462" y="172" class="mono val-dim">Semarang, Indonesia (UTC+7)</text>
+      <text x="382" y="189" class="mono key">Status</text>
+      <circle cx="466" cy="185" r="3.5" fill="none" stroke="#34d399" stroke-width="1.2">
+        <animate attributeName="r" values="3.5;9.5" dur="2.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.85;0" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="466" cy="185" r="3.5" fill="#34d399"/>
+      <text x="478" y="189" class="mono val-ok">Building • Open to Internships &amp; Collab</text>
+    </g>
 
     <!-- SECTION: CORE.STACK -->
-    <line x1="382" y1="204" x2="866" y2="204" stroke="#1e293b" stroke-width="0.8"/>
-    <text x="382" y="223" class="mono sec">CORE.STACK</text>
-    <text x="382" y="242" class="mono key">Backend</text>
-    <text x="462" y="242" class="mono val">Go • FastAPI • Laravel • Node.js • REST</text>
-    <text x="382" y="259" class="mono key">Data/ML</text>
-    <text x="462" y="259" class="mono val">PostgreSQL • MySQL • Scikit-learn • LangChain</text>
-    <text x="382" y="276" class="mono key">Hardware</text>
-    <text x="462" y="276" class="mono val">FPGA (Nexys A7 / Verilog) • Arduino • PID</text>
-    <text x="382" y="293" class="mono key">Frontend</text>
-    <text x="462" y="293" class="mono val-dim">TypeScript • React • Vue • Tailwind CSS</text>
+    <g class="boot-2">
+      <line x1="382" y1="204" x2="866" y2="204" stroke="#1e293b" stroke-width="0.8"/>
+      <text x="382" y="223" class="mono sec">CORE.STACK</text>
+      <text x="382" y="242" class="mono key">Backend</text>
+      <text x="462" y="242" class="mono val">Go • FastAPI • Laravel • Node.js • REST</text>
+      <text x="382" y="259" class="mono key">Data/ML</text>
+      <text x="462" y="259" class="mono val">PostgreSQL • MySQL • Scikit-learn • LangChain</text>
+      <text x="382" y="276" class="mono key">Hardware</text>
+      <text x="462" y="276" class="mono val">FPGA (Nexys A7 / Verilog) • Arduino • PID</text>
+      <text x="382" y="293" class="mono key">Frontend</text>
+      <text x="462" y="293" class="mono val-dim">TypeScript • React • Vue • Tailwind CSS</text>
+    </g>
 
     <!-- SECTION: SHIP.LOG -->
-    <line x1="382" y1="308" x2="866" y2="308" stroke="#1e293b" stroke-width="0.8"/>
-    <text x="382" y="327" class="mono sec">SHIP.LOG</text>
-    <text x="382" y="346" class="mono val-accent">SADEWA</text>
-    <text x="462" y="346" class="mono val">Predictive OBE academic evaluation platform</text>
-    <text x="382" y="363" class="mono val-accent">Moris</text>
-    <text x="462" y="363" class="mono val">Smart tourism + WhatsApp AI weather helpdesk</text>
-    <text x="382" y="380" class="mono val-accent">FPGA/PID</text>
-    <text x="462" y="380" class="mono val">Position control &amp; FSM visitor tracking (Verilog)</text>
-    <text x="382" y="397" class="mono val-accent">Nexus</text>
-    <text x="462" y="397" class="mono val-dim">HRIS &amp; real-time collaborative whiteboard (TS)</text>
+    <g class="boot-3">
+      <line x1="382" y1="308" x2="866" y2="308" stroke="#1e293b" stroke-width="0.8"/>
+      <text x="382" y="327" class="mono sec">SHIP.LOG</text>
+      <text x="382" y="346" class="mono val-accent">SADEWA</text>
+      <text x="462" y="346" class="mono val">Predictive OBE academic evaluation platform</text>
+      <text x="382" y="363" class="mono val-accent">Moris</text>
+      <text x="462" y="363" class="mono val">Smart tourism + WhatsApp AI weather helpdesk</text>
+      <text x="382" y="380" class="mono val-accent">FPGA/PID</text>
+      <text x="462" y="380" class="mono val">Position control &amp; FSM visitor tracking (Verilog)</text>
+      <text x="382" y="397" class="mono val-accent">Nexus</text>
+      <text x="462" y="397" class="mono val-dim">HRIS &amp; real-time collaborative whiteboard (TS)</text>
+    </g>
 
     <!-- Bottom Status Bar -->
     <rect x="0" y="418" width="900" height="27" fill="#070b14"/>
@@ -171,7 +245,7 @@
     <rect x="16" y="424" width="54" height="15" rx="3" fill="#0ea5e9" opacity="0.18"/>
     <text x="43" y="435" text-anchor="middle" class="mono" font-size="9.5" font-weight="700" fill="#38bdf8">NORMAL</text>
     <text x="82" y="435" class="mono status-txt">github.com/buildwithmajid  │  BACKEND + IOT + ML</text>
-    <text x="884" y="435" text-anchor="end" class="mono status-txt">UTF-8  │  LN 1, COL 1</text>
+    <text x="884" y="435" text-anchor="end" class="mono status-txt">UTF-8  │  SIG: 60HZ</text>
   </g>
 
   <!-- Outer Crisp Border -->
