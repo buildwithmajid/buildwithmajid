@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="445" viewBox="0 0 900 445" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="900" y2="445" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="55%" stop-color="#0d1321"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="topBar" x1="0" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accentLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="portraitGlow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="#0284c7" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#0b1120" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="windowClip">
+      <rect x="1" y="1" width="898" height="443" rx="12"/>
+    </clipPath>
+    <style>
+      .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+      .ascii { font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace; font-size: 7.4px; font-weight: 600; letter-spacing: 0.3px; }
+      .title { font-size: 11.5px; fill: #94a3b8; font-weight: 500; }
+      .tag { font-size: 10px; fill: #475569; letter-spacing: 1px; font-weight: 600; }
+      .prompt { font-size: 12px; fill: #38bdf8; font-weight: 600; }
+      .sec { font-size: 10.5px; fill: #38bdf8; font-weight: 700; letter-spacing: 1.4px; }
+      .key { font-size: 11.5px; fill: #64748b; font-weight: 500; }
+      .val { font-size: 11.5px; fill: #e2e8f0; font-weight: 400; }
+      .val-hi { font-size: 11.5px; fill: #f8fafc; font-weight: 600; }
+      .val-dim { font-size: 11.5px; fill: #94a3b8; font-weight: 400; }
+      .val-accent { font-size: 11.5px; fill: #7dd3fc; font-weight: 500; }
+      .val-ok { font-size: 11.5px; fill: #34d399; font-weight: 500; }
+      .status-txt { font-size: 10px; fill: #64748b; letter-spacing: 0.6px; }
+      @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+      .cursor { animation: blink 1.1s step-end infinite; }
+    </style>
+  </defs>
+
+  <!-- Main Window Frame -->
+  <g clip-path="url(#windowClip)">
+    <rect x="0" y="0" width="900" height="445" fill="url(#bgGrad)"/>
+
+    <!-- Subtle grid pattern on right pane -->
+    <g opacity="0.04" stroke="#38bdf8" stroke-width="0.6">
+      <line x1="365" y1="36" x2="365" y2="418"/>
+      <line x1="540" y1="36" x2="540" y2="418"/>
+      <line x1="720" y1="36" x2="720" y2="418"/>
+      <line x1="365" y1="130" x2="899" y2="130"/>
+      <line x1="365" y1="230" x2="899" y2="230"/>
+      <line x1="365" y1="330" x2="899" y2="330"/>
+    </g>
+
+    <!-- Title Bar -->
+    <rect x="0" y="0" width="900" height="36" fill="url(#topBar)"/>
+    <line x1="0" y1="36" x2="900" y2="36" stroke="#1e293b" stroke-width="1"/>
+    <circle cx="20" cy="18" r="5.5" fill="#ff5f56"/>
+    <circle cx="38" cy="18" r="5.5" fill="#ffbd2e"/>
+    <circle cx="56" cy="18" r="5.5" fill="#27c93f"/>
+    <text x="78" y="22" class="mono title">majid@undip:~/buildwithmajid — zsh</text>
+    <text x="880" y="22" text-anchor="end" class="mono tag">SYS.PROFILE // REV.26</text>
+
+    <!-- Left Pane: Portrait Box -->
+    <rect x="16" y="48" width="334" height="358" rx="8" fill="#070b14" stroke="#1e293b" stroke-width="1"/>
+    <ellipse cx="183" cy="220" rx="145" ry="155" fill="url(#portraitGlow)"/>
+    <text x="28" y="64" class="mono tag">VISUAL.IMG // PORTRAIT_ASCII</text>
+    <circle cx="336" cy="60" r="3" fill="#38bdf8" opacity="0.8"/>
+
+    <!-- ASCII Portrait -->
+    <g class="ascii">
+    <text x="28" y="100.5" xml:space="preserve"><tspan fill="none">                            </tspan><tspan fill="#172554">.</tspan><tspan fill="none"> </tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">..</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">.</tspan><tspan fill="#1d4ed8">:</tspan></text>
+    <text x="28" y="107.6" xml:space="preserve"><tspan fill="none">                        </tspan><tspan fill="#172554">...</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">...</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">.,.</tspan><tspan fill="#1e3a8a">,,:</tspan><tspan fill="#0284c7">+</tspan><tspan fill="#38bdf8">#</tspan></text>
+    <text x="28" y="114.8" xml:space="preserve"><tspan fill="none">                       </tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">..</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">..</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">........</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#38bdf8">#</tspan><tspan fill="#7dd3fc">#</tspan></text>
+    <text x="28" y="121.9" xml:space="preserve"><tspan fill="none">                      </tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">.......</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#0ea5e9">=*==</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#172554">..</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0ea5e9">*</tspan><tspan fill="#0369a1">+</tspan></text>
+    <text x="28" y="129.1" xml:space="preserve"><tspan fill="none">                      </tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">...</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#0284c7">+</tspan><tspan fill="#0ea5e9">*</tspan><tspan fill="#38bdf8">##</tspan><tspan fill="#7dd3fc">%</tspan><tspan fill="#bae6fd">@@%</tspan><tspan fill="#7dd3fc">%#</tspan><tspan fill="#38bdf8">*</tspan><tspan fill="#172554">...</tspan><tspan fill="#1e3a8a">,</tspan></text>
+    <text x="28" y="136.2" xml:space="preserve"><tspan fill="none">                     </tspan><tspan fill="#172554">....</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#0284c7">+</tspan><tspan fill="#0ea5e9">=</tspan><tspan fill="#38bdf8">*</tspan><tspan fill="#7dd3fc">#%%%</tspan><tspan fill="#bae6fd">@@@</tspan><tspan fill="#7dd3fc">%%%</tspan><tspan fill="#0ea5e9">*</tspan><tspan fill="#172554">.,.</tspan></text>
+    <text x="28" y="143.4" xml:space="preserve"><tspan fill="none">                     </tspan><tspan fill="#172554">...</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#0369a1">+</tspan><tspan fill="#0ea5e9">=*</tspan><tspan fill="#38bdf8">#</tspan><tspan fill="#7dd3fc">#%</tspan><tspan fill="#bae6fd">@@@@@</tspan><tspan fill="#7dd3fc">#</tspan><tspan fill="#38bdf8">###</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#172554">..</tspan></text>
+    <text x="28" y="150.5" xml:space="preserve"><tspan fill="none">                     </tspan><tspan fill="#172554">...</tspan><tspan fill="#0369a1">;;</tspan><tspan fill="#1e3a8a">,:,</tspan><tspan fill="#1d4ed8">:;</tspan><tspan fill="#0ea5e9">=</tspan><tspan fill="#38bdf8">**</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#172554">.</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#0369a1">+;</tspan><tspan fill="#0ea5e9">==</tspan><tspan fill="#172554">..</tspan></text>
+    <text x="28" y="157.7" xml:space="preserve"><tspan fill="none">                      </tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:;</tspan><tspan fill="#0369a1">+;;</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#0284c7">+</tspan><tspan fill="#0369a1">+</tspan><tspan fill="#0284c7">+</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0284c7">==</tspan><tspan fill="#0ea5e9">*</tspan><tspan fill="#0369a1">+</tspan><tspan fill="#1e3a8a">,</tspan></text>
+    <text x="28" y="164.8" xml:space="preserve"><tspan fill="none">                      </tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#0369a1">;;</tspan><tspan fill="#0284c7">=++</tspan><tspan fill="#38bdf8">#</tspan><tspan fill="#0ea5e9">*</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#7dd3fc">%</tspan><tspan fill="#0284c7">+</tspan><tspan fill="#38bdf8">**</tspan><tspan fill="#0ea5e9">=</tspan><tspan fill="#38bdf8">*</tspan><tspan fill="#7dd3fc">#</tspan><tspan fill="#38bdf8">#</tspan><tspan fill="#0ea5e9">=</tspan><tspan fill="#0369a1">+</tspan><tspan fill="#1e3a8a">:</tspan></text>
+    <text x="28" y="171.9" xml:space="preserve"><tspan fill="none">                      </tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#0284c7">+</tspan><tspan fill="#0369a1">+</tspan><tspan fill="#0ea5e9">=***==</tspan><tspan fill="#7dd3fc">%</tspan><tspan fill="#bae6fd">@</tspan><tspan fill="#38bdf8">#</tspan><tspan fill="#0284c7">=</tspan><tspan fill="#7dd3fc">%</tspan><tspan fill="#38bdf8">#</tspan><tspan fill="#0ea5e9">*=</tspan><tspan fill="#38bdf8">#</tspan><tspan fill="#0284c7">==</tspan></text>
+    <text x="28" y="179.1" xml:space="preserve"><tspan fill="none">                      </tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0369a1">+</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#0284c7">+</tspan><tspan fill="#38bdf8">*#</tspan><tspan fill="#0284c7">=</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#0284c7">=</tspan><tspan fill="#0ea5e9">=</tspan><tspan fill="#38bdf8">#</tspan><tspan fill="#0ea5e9">=</tspan><tspan fill="#38bdf8">*</tspan><tspan fill="#7dd3fc">##</tspan><tspan fill="#38bdf8">*</tspan><tspan fill="#0284c7">+</tspan></text>
+    <text x="28" y="186.2" xml:space="preserve"><tspan fill="none">                       </tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#0ea5e9">*</tspan><tspan fill="#7dd3fc">%</tspan><tspan fill="#38bdf8">#</tspan><tspan fill="#0ea5e9">**</tspan><tspan fill="#38bdf8">*#</tspan><tspan fill="#7dd3fc">%</tspan><tspan fill="#bae6fd">%@</tspan><tspan fill="#7dd3fc">%</tspan><tspan fill="#38bdf8">#</tspan><tspan fill="#0ea5e9">*</tspan><tspan fill="#0284c7">+=</tspan></text>
+    <text x="28" y="193.4" xml:space="preserve"><tspan fill="none">                        </tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">;;</tspan><tspan fill="#0284c7">+</tspan><tspan fill="#0ea5e9">*</tspan><tspan fill="#0284c7">+</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#0ea5e9">==</tspan><tspan fill="#0284c7">+</tspan><tspan fill="#0ea5e9">=*</tspan><tspan fill="#38bdf8">#*</tspan><tspan fill="#0ea5e9">=</tspan><tspan fill="#0369a1">;</tspan></text>
+    <text x="28" y="200.6" xml:space="preserve"><tspan fill="none">                         </tspan><tspan fill="#1d4ed8">::;</tspan><tspan fill="#0369a1">+</tspan><tspan fill="#0284c7">=</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#0284c7">+=</tspan><tspan fill="#0ea5e9">*</tspan><tspan fill="#7dd3fc">%%</tspan><tspan fill="#38bdf8">*</tspan><tspan fill="#0ea5e9">*</tspan><tspan fill="#0284c7">=</tspan><tspan fill="#1d4ed8">;</tspan></text>
+    <text x="28" y="207.7" xml:space="preserve"><tspan fill="none">                          </tspan><tspan fill="#1e3a8a">:,</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#0284c7">=</tspan><tspan fill="#0ea5e9">=</tspan><tspan fill="#38bdf8">*##*</tspan><tspan fill="#0284c7">+</tspan><tspan fill="#1d4ed8">;:</tspan></text>
+    <text x="28" y="214.8" xml:space="preserve"><tspan fill="none">                          </tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">.....</tspan><tspan fill="#1e3a8a">,,,</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0284c7">+</tspan></text>
+    <text x="28" y="222.0" xml:space="preserve"><tspan fill="none">                         </tspan><tspan fill="#172554">.</tspan><tspan fill="#0369a1">+;</tspan><tspan fill="#1d4ed8">::</tspan><tspan fill="#1e3a8a">,,:</tspan><tspan fill="#1d4ed8">:;</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#0ea5e9">*</tspan><tspan fill="#7dd3fc">%</tspan><tspan fill="#0369a1">;</tspan></text>
+    <text x="28" y="229.2" xml:space="preserve"><tspan fill="none">                        </tspan><tspan fill="#172554">...</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#0369a1">+;</tspan><tspan fill="#1d4ed8">;;;</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#0ea5e9">=</tspan><tspan fill="#7dd3fc">%%</tspan><tspan fill="#0ea5e9">=</tspan><tspan fill="#1e3a8a">,,</tspan></text>
+    <text x="28" y="236.3" xml:space="preserve"><tspan fill="none">                      </tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">....</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#0369a1">+++</tspan><tspan fill="#38bdf8">*</tspan><tspan fill="#7dd3fc">%</tspan><tspan fill="#bae6fd">%%</tspan><tspan fill="#0284c7">=</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">::,</tspan><tspan fill="#172554">.</tspan></text>
+    <text x="28" y="243.5" xml:space="preserve"><tspan fill="none">                </tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#172554">.......</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">...</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#0ea5e9">*</tspan><tspan fill="#7dd3fc">%%%%</tspan><tspan fill="#0284c7">+</tspan><tspan fill="#172554">..</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">:,,,,</tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,</tspan></text>
+    <text x="28" y="250.6" xml:space="preserve"><tspan fill="none">           </tspan><tspan fill="#172554">..</tspan><tspan fill="#1e3a8a">,,,,</tspan><tspan fill="#1d4ed8">::::</tspan><tspan fill="#1e3a8a">:,,</tspan><tspan fill="#172554">.....</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#bae6fd">@@@@</tspan><tspan fill="#0284c7">+</tspan><tspan fill="#172554">.....</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">::::</tspan><tspan fill="#1e3a8a">:,,,,</tspan><tspan fill="#172554">,</tspan></text>
+    <text x="28" y="257.8" xml:space="preserve"><tspan fill="none">         </tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,,,:</tspan><tspan fill="#1d4ed8">::</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">::::,</tspan><tspan fill="#172554">..</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">....</tspan><tspan fill="#38bdf8">#</tspan><tspan fill="#bae6fd">@@</tspan><tspan fill="#0ea5e9">*</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#172554">.....</tspan><tspan fill="#1d4ed8">:::</tspan><tspan fill="#1e3a8a">::::::,,,</tspan><tspan fill="#172554">.</tspan></text>
+    <text x="28" y="264.9" xml:space="preserve"><tspan fill="none">        </tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,:</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">,,,,</tspan><tspan fill="#1d4ed8">:::::::::</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#172554">....</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#0284c7">=</tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:::::</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">::::</tspan><tspan fill="#1e3a8a">:,,,,:,,,</tspan><tspan fill="#172554">.</tspan></text>
+    <text x="28" y="272.1" xml:space="preserve"><tspan fill="none">       </tspan><tspan fill="#172554">.</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#1e3a8a">:,</tspan><tspan fill="#1d4ed8">:::</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">:::::;;:::::</tspan><tspan fill="#1e3a8a">,,,</tspan><tspan fill="#1d4ed8">:::::::::::::</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">::::</tspan><tspan fill="#1e3a8a">:,,</tspan><tspan fill="#172554">..</tspan></text>
+    <text x="28" y="279.2" xml:space="preserve"><tspan fill="none">       </tspan><tspan fill="#172554">.</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">:;:::::::::::;:::</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">::::::::::;::::::::</tspan><tspan fill="#1e3a8a">:,</tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,</tspan></text>
+    <text x="28" y="286.4" xml:space="preserve"><tspan fill="none">      </tspan><tspan fill="#172554">..</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">;::;;::::::::::;::;</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">:;::::::::::;;::::</tspan><tspan fill="#1e3a8a">:,,</tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">:,</tspan></text>
+    <text x="28" y="293.5" xml:space="preserve"><tspan fill="none">      </tspan><tspan fill="#172554">..</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#172554">.</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#0369a1">;;</tspan><tspan fill="#1d4ed8">;;:::::;;;</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1d4ed8">;::;:;:</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">:;::::::::;;;;::</tspan><tspan fill="#1e3a8a">:,,,</tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">,</tspan></text>
+    <text x="28" y="300.6" xml:space="preserve"><tspan fill="none">      </tspan><tspan fill="#172554">..</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#172554">.</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">.</tspan><tspan fill="#1d4ed8">:;</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1d4ed8">;:::;:;;;</tspan><tspan fill="#0369a1">;;</tspan><tspan fill="#1d4ed8">;;;:;:</tspan><tspan fill="#1e3a8a">:,</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1d4ed8">::::::::::</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">;;:</tspan><tspan fill="#1e3a8a">::</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#172554">.</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">,</tspan></text>
+    <text x="28" y="307.8" xml:space="preserve"><tspan fill="none">     </tspan><tspan fill="#172554">...</tspan><tspan fill="#0369a1">+</tspan><tspan fill="#172554">.....</tspan><tspan fill="#0369a1">;;</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1d4ed8">;;;;;;</tspan><tspan fill="#0369a1">;;;</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#0369a1">;;</tspan><tspan fill="#1d4ed8">:;::</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#1d4ed8">:;;:;::::</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#172554">....</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#172554">,.</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#172554">.</tspan></text>
+    <text x="28" y="315.0" xml:space="preserve"><tspan fill="none">     </tspan><tspan fill="#172554">..,</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#172554">.....</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:;</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#0369a1">;;;;;;;</tspan><tspan fill="#1d4ed8">;;;;</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1d4ed8">:;::</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:::;;;;::::</tspan><tspan fill="#172554">....</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">..</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#172554">.</tspan></text>
+    <text x="28" y="322.1" xml:space="preserve"><tspan fill="none">     </tspan><tspan fill="#172554">..</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#172554">.........</tspan><tspan fill="#0369a1">;;</tspan><tspan fill="#1d4ed8">;:</tspan><tspan fill="#0369a1">;;;;;;;</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">::::;;</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:::::::::::</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#172554">.....</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#172554">,</tspan></text>
+    <text x="28" y="329.2" xml:space="preserve"><tspan fill="none">     </tspan><tspan fill="#172554">...</tspan><tspan fill="#0369a1">+</tspan><tspan fill="#172554">.........</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1d4ed8">:;::;:</tspan><tspan fill="#0369a1">;;;;</tspan><tspan fill="#1d4ed8">:;:;:::::::::::::</tspan><tspan fill="#1e3a8a">:,,</tspan><tspan fill="#172554">....</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">:,</tspan></text>
+    <text x="28" y="336.4" xml:space="preserve"><tspan fill="none">    </tspan><tspan fill="#172554">....,..........</tspan><tspan fill="#1d4ed8">;::;</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#0369a1">;;</tspan><tspan fill="#1d4ed8">:::;</tspan><tspan fill="#1e3a8a">:,</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1d4ed8">:;::::;:::::</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">....</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">::</tspan></text>
+    <text x="28" y="343.6" xml:space="preserve"><tspan fill="none">    </tspan><tspan fill="#172554">..,............</tspan><tspan fill="#1e3a8a">,,,,</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">...</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1d4ed8">;::</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1d4ed8">::;</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1d4ed8">:::</tspan><tspan fill="#1e3a8a">,:</tspan><tspan fill="#1d4ed8">::</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#172554">...</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">:,</tspan></text>
+    <text x="28" y="350.7" xml:space="preserve"><tspan fill="none">    </tspan><tspan fill="#172554">.,............</tspan><tspan fill="#1e3a8a">,,,</tspan><tspan fill="#172554">...</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">..</tspan><tspan fill="#1d4ed8">;::::::;</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">,,:</tspan><tspan fill="#1d4ed8">:::</tspan><tspan fill="#172554">..</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">::</tspan><tspan fill="#172554">....,</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">:,</tspan><tspan fill="#172554">.</tspan></text>
+    <text x="28" y="357.9" xml:space="preserve"><tspan fill="none">    </tspan><tspan fill="#172554">.</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">.......</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">......</tspan><tspan fill="#1e3a8a">,:</tspan><tspan fill="#172554">...,</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#0ea5e9">=</tspan><tspan fill="#1d4ed8">:::::::</tspan><tspan fill="#172554">..</tspan><tspan fill="#1e3a8a">,:</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,:</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#172554">,..</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:;:</tspan><tspan fill="#1e3a8a">:,</tspan><tspan fill="#172554">.</tspan></text>
+    <text x="28" y="365.0" xml:space="preserve"><tspan fill="none">    </tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#0369a1">+</tspan><tspan fill="#172554">...........</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">...</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#172554">..</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:;:;;:</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#172554">..</tspan><tspan fill="#1d4ed8">:;</tspan><tspan fill="#172554">..</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#172554">,..</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:;:</tspan><tspan fill="#1e3a8a">:,,</tspan></text>
+    <text x="28" y="372.2" xml:space="preserve"><tspan fill="none">    </tspan><tspan fill="#172554">..</tspan><tspan fill="#0369a1">;;</tspan><tspan fill="#172554">.........,</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">...</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">...</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">;</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#172554">,.</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1e3a8a">:,</tspan><tspan fill="#0369a1">;;;</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#1d4ed8">:;;</tspan><tspan fill="#172554">..</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#172554">....</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">,..</tspan><tspan fill="#1e3a8a">,,</tspan></text>
+    <text x="28" y="379.3" xml:space="preserve"><tspan fill="none">    </tspan><tspan fill="#172554">..</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0369a1">+;</tspan><tspan fill="#172554">............</tspan><tspan fill="#1e3a8a">,,,,</tspan><tspan fill="#172554">..</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#0369a1">;;</tspan><tspan fill="#1d4ed8">:</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#0369a1">;</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#1d4ed8">:;;;:</tspan><tspan fill="#1e3a8a">:</tspan><tspan fill="#1d4ed8">:::</tspan><tspan fill="#172554">.</tspan><tspan fill="#1e3a8a">,</tspan><tspan fill="#172554">...,</tspan><tspan fill="#1e3a8a">,,</tspan><tspan fill="#1d4ed8">::</tspan><tspan fill="#1e3a8a">:,</tspan></text>
+    </g>
+
+    <!-- Portrait Footer Meta -->
+    <line x1="28" y1="391" x2="338" y2="391" stroke="#1e293b" stroke-width="0.8"/>
+    <text x="28" y="401" class="mono status-txt">RES: 62x43 MONO</text>
+    <text x="338" y="401" text-anchor="end" class="mono status-txt">RENDER: OK</text>
+
+    <!-- Right Pane: Neofetch Telemetry -->
+    <rect x="364" y="48" width="520" height="358" rx="8" fill="#090f1d" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Terminal Command Header -->
+    <text x="382" y="70" class="mono prompt">buildwithmajid@github<tspan fill="#64748b">:~$</tspan> <tspan fill="#e2e8f0">neofetch --spec</tspan></text>
+    <rect x="680" y="59" width="7" height="13" fill="#38bdf8" class="cursor"/>
+    <rect x="382" y="79" width="484" height="1.2" fill="url(#accentLine)"/>
+
+    <!-- SECTION: IDENTITY -->
+    <text x="382" y="102" class="mono sec">IDENTITY</text>
+    <text x="382" y="121" class="mono key">Subject</text>
+    <text x="462" y="121" class="mono val-hi">Muhammad Abdul Majid</text>
+    <text x="382" y="138" class="mono key">Role</text>
+    <text x="462" y="138" class="mono val">Computer Engineering • Backend &amp; IoT</text>
+    <text x="382" y="155" class="mono key">Campus</text>
+    <text x="462" y="155" class="mono val">Universitas Diponegoro (UNDIP)</text>
+    <text x="382" y="172" class="mono key">Location</text>
+    <text x="462" y="172" class="mono val-dim">Semarang, Indonesia (UTC+7)</text>
+    <text x="382" y="189" class="mono key">Status</text>
+    <circle cx="466" cy="185" r="3.5" fill="#34d399"/>
+    <text x="476" y="189" class="mono val-ok">Building • Open to Internships &amp; Collab</text>
+
+    <!-- SECTION: CORE.STACK -->
+    <line x1="382" y1="204" x2="866" y2="204" stroke="#1e293b" stroke-width="0.8"/>
+    <text x="382" y="223" class="mono sec">CORE.STACK</text>
+    <text x="382" y="242" class="mono key">Backend</text>
+    <text x="462" y="242" class="mono val">Go • FastAPI • Laravel • Node.js • REST</text>
+    <text x="382" y="259" class="mono key">Data/ML</text>
+    <text x="462" y="259" class="mono val">PostgreSQL • MySQL • Scikit-learn • LangChain</text>
+    <text x="382" y="276" class="mono key">Hardware</text>
+    <text x="462" y="276" class="mono val">FPGA (Nexys A7 / Verilog) • Arduino • PID</text>
+    <text x="382" y="293" class="mono key">Frontend</text>
+    <text x="462" y="293" class="mono val-dim">TypeScript • React • Vue • Tailwind CSS</text>
+
+    <!-- SECTION: SHIP.LOG -->
+    <line x1="382" y1="308" x2="866" y2="308" stroke="#1e293b" stroke-width="0.8"/>
+    <text x="382" y="327" class="mono sec">SHIP.LOG</text>
+    <text x="382" y="346" class="mono val-accent">SADEWA</text>
+    <text x="462" y="346" class="mono val">Predictive OBE academic evaluation platform</text>
+    <text x="382" y="363" class="mono val-accent">Moris</text>
+    <text x="462" y="363" class="mono val">Smart tourism + WhatsApp AI weather helpdesk</text>
+    <text x="382" y="380" class="mono val-accent">FPGA/PID</text>
+    <text x="462" y="380" class="mono val">Position control &amp; FSM visitor tracking (Verilog)</text>
+    <text x="382" y="397" class="mono val-accent">Nexus</text>
+    <text x="462" y="397" class="mono val-dim">HRIS &amp; real-time collaborative whiteboard (TS)</text>
+
+    <!-- Bottom Status Bar -->
+    <rect x="0" y="418" width="900" height="27" fill="#070b14"/>
+    <line x1="0" y1="418" x2="900" y2="418" stroke="#1e293b" stroke-width="1"/>
+    <rect x="16" y="424" width="54" height="15" rx="3" fill="#0ea5e9" opacity="0.18"/>
+    <text x="43" y="435" text-anchor="middle" class="mono" font-size="9.5" font-weight="700" fill="#38bdf8">NORMAL</text>
+    <text x="82" y="435" class="mono status-txt">github.com/buildwithmajid  │  BACKEND + IOT + ML</text>
+    <text x="884" y="435" text-anchor="end" class="mono status-txt">UTF-8  │  LN 1, COL 1</text>
+  </g>
+
+  <!-- Outer Crisp Border -->
+  <rect x="0.75" y="0.75" width="898.5" height="443.5" rx="12" stroke="#1e293b" stroke-width="1.5"/>
+</svg>
