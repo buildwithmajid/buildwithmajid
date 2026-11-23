@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="100%" src="assets/terminal-hud.svg?v=2" alt="Muhammad Abdul Majid — Terminal Profile HUD" />
+  <img width="100%" src="assets/terminal-hud.svg?v=3" alt="Muhammad Abdul Majid — Terminal Profile HUD" />
 </div>
 
 <div align="center">
