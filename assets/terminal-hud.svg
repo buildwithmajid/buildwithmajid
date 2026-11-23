@@ -21,8 +21,8 @@
     </radialGradient>
     <linearGradient id="scanGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
-      <stop offset="82%" stop-color="#38bdf8" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="#7dd3fc" stop-opacity="0.55"/>
+      <stop offset="78%" stop-color="#38bdf8" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#7dd3fc" stop-opacity="0.72"/>
     </linearGradient>
     <clipPath id="windowClip">
       <rect x="1" y="1" width="898" height="443" rx="12"/>
