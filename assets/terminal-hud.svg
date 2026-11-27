@@ -253,9 +253,9 @@
       <text x="382" y="121" class="mono key">Subject</text>
       <text x="462" y="121" class="mono val-hi">Muhammad Abdul Majid</text>
       <text x="382" y="138" class="mono key">Role</text>
-      <text x="462" y="138" class="mono val">Computer Engineering • Backend &amp; IoT</text>
+      <text x="462" y="138" class="mono val">Full-Stack Engineer • Backend &amp; IoT</text>
       <text x="382" y="155" class="mono key">Campus</text>
-      <text x="462" y="155" class="mono val">Universitas Diponegoro (UNDIP)</text>
+      <text x="462" y="155" class="mono val">Computer Engineering • UNDIP</text>
       <text x="382" y="172" class="mono key">Location</text>
       <text x="462" y="172" class="mono val-dim">Semarang, Indonesia (UTC+7)</text>
       <text x="382" y="189" class="mono key">Status</text>
@@ -271,28 +271,28 @@
     <g class="boot-2">
       <line x1="382" y1="204" x2="866" y2="204" stroke="#1e293b" stroke-width="0.8"/>
       <text x="382" y="223" class="mono sec">CORE.STACK</text>
-      <text x="382" y="242" class="mono key">Backend</text>
-      <text x="462" y="242" class="mono val">Go • FastAPI • Laravel • Node.js • REST</text>
-      <text x="382" y="259" class="mono key">Data/ML</text>
-      <text x="462" y="259" class="mono val">PostgreSQL • MySQL • Scikit-learn • LangChain</text>
-      <text x="382" y="276" class="mono key">Hardware</text>
-      <text x="462" y="276" class="mono val">FPGA (Nexys A7 / Verilog) • Arduino • PID</text>
-      <text x="382" y="293" class="mono key">Frontend</text>
-      <text x="462" y="293" class="mono val-dim">TypeScript • React • Vue • Tailwind CSS</text>
+      <text x="382" y="242" class="mono key">Frontend</text>
+      <text x="462" y="242" class="mono val">Next.js • React • TypeScript • Three.js • Tailwind</text>
+      <text x="382" y="259" class="mono key">Backend</text>
+      <text x="462" y="259" class="mono val">NestJS • FastAPI • Go • Laravel • Node.js</text>
+      <text x="382" y="276" class="mono key">Data/Ops</text>
+      <text x="462" y="276" class="mono val">PostgreSQL • Prisma • Supabase • Docker • ML</text>
+      <text x="382" y="293" class="mono key">Hardware</text>
+      <text x="462" y="293" class="mono val-dim">FPGA (Nexys A7 / Verilog) • Arduino • PID</text>
     </g>
 
     <!-- SECTION: SHIP.LOG -->
     <g class="boot-3">
       <line x1="382" y1="308" x2="866" y2="308" stroke="#1e293b" stroke-width="0.8"/>
       <text x="382" y="327" class="mono sec">SHIP.LOG</text>
-      <text x="382" y="346" class="mono val-accent">SADEWA</text>
-      <text x="462" y="346" class="mono val">Predictive OBE academic evaluation platform</text>
-      <text x="382" y="363" class="mono val-accent">Moris</text>
-      <text x="462" y="363" class="mono val">Smart tourism + WhatsApp AI weather helpdesk</text>
-      <text x="382" y="380" class="mono val-accent">FPGA/PID</text>
-      <text x="462" y="380" class="mono val">Position control &amp; FSM visitor tracking (Verilog)</text>
-      <text x="382" y="397" class="mono val-accent">Nexus</text>
-      <text x="462" y="397" class="mono val-dim">HRIS &amp; real-time collaborative whiteboard (TS)</text>
+      <text x="382" y="346" class="mono val-accent">TeduhHR</text>
+      <text x="462" y="346" class="mono val">End-to-end Indonesian HRIS &amp; PPh 21 payroll engine</text>
+      <text x="382" y="363" class="mono val-accent">Efgraphy</text>
+      <text x="462" y="363" class="mono val">3D interactive studio portfolio &amp; Supabase CMS</text>
+      <text x="382" y="380" class="mono val-accent">SADEWA</text>
+      <text x="462" y="380" class="mono val">Predictive OBE academic evaluation platform</text>
+      <text x="382" y="397" class="mono val-accent">Moris</text>
+      <text x="462" y="397" class="mono val-dim">Smart tourism + WhatsApp AI weather helpdesk</text>
     </g>
 
     <!-- Bottom Status Bar -->
@@ -300,7 +300,7 @@
     <line x1="0" y1="418" x2="900" y2="418" stroke="#1e293b" stroke-width="1"/>
     <rect x="16" y="424" width="54" height="15" rx="3" fill="#0ea5e9" opacity="0.18"/>
     <text x="43" y="435" text-anchor="middle" class="mono" font-size="9.5" font-weight="700" fill="#38bdf8">NORMAL</text>
-    <text x="82" y="435" class="mono status-txt">github.com/buildwithmajid  │  BACKEND + IOT + ML</text>
+    <text x="82" y="435" class="mono status-txt">github.com/buildwithmajid  │  FULL-STACK + IOT + ML</text>
     <text x="884" y="435" text-anchor="end" class="mono status-txt">UTF-8  │  SIG: 60HZ</text>
   </g>
 
